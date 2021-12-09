@@ -2,5 +2,14 @@
 use App\QueryBuilder;
 $db = new QueryBuilder();
 
-$posts = $db ->getAll('posts');
-var_dump($posts);
+//$db ->getAll('posts');
+
+//$db->insert([
+//    "title" => "my new note 09"
+//], 'posts');
+
+//$db->update([
+//    "title" => "my new note 27"
+//],27, 'posts');
+
+$db->delete(27, 'posts');
