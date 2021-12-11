@@ -2,8 +2,11 @@
 
 require '../vendor/autoload.php';
 
-// Create new Plates instance
+
 $templates = new League\Plates\Engine('../app/views');
 
-// Render a template
-echo $templates->render('about', ['title' => 'MARK']);
+if ($_SERVER['REQUEST_URI'] == "/"){
+    echo $templates->render('homepage', ['name' => 'MARK']);
+} elseif ($_SERVER['REQUEST_URI'] == "/about") {
+    echo $templates->render('about');
+}
