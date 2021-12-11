@@ -2,7 +2,6 @@
 
 require '../vendor/autoload.php';
 
-
 $templates = new League\Plates\Engine('../app/views');
 
 if ($_SERVER['REQUEST_URI'] == "/"){
